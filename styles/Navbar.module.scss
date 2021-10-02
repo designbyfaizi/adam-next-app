@@ -1,0 +1,28 @@
+header{
+    .nav{
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .logo{
+            padding: 1rem;
+            &:hover{
+                background-color: rgb(217, 255, 255);
+                border-radius: 5px;
+            }
+
+            img{
+                width: 100px;
+            }
+        }
+
+        .navItems{
+            a{
+                margin: 1rem;
+                font-weight: 600;
+
+            }
+        }
+    }
+}

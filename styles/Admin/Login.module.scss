@@ -1,0 +1,147 @@
+@import "../variables.scss";
+
+.main {
+    min-height: 100vh;
+    .loginSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .leftContainer {
+            flex: 50%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $color-primary-dark;
+            img {
+                width: 450px;
+            }
+            h1 {
+                font-size: 20px;
+                letter-spacing: 2px;
+                margin: 0.5rem;
+                padding: 0.5rem 1rem;
+                border-radius: 7px;
+                @include smooth();
+                &:hover {
+                    background: $color-primary-light;
+                    cursor: pointer;
+                }
+            }
+
+            .businessText {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2 {
+                    font-size: 30px;
+                }
+                h3 {
+                    font-size: 50px;
+                    font-weight: 700;
+                    background: linear-gradient(to right, $color-secondary, $color-primary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                h4{
+                    font-size: 30px;
+                }
+            }
+        }
+        .rightContainer {
+            flex: 50%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            
+            .formContainer{
+                background: rgb(255, 255, 255);
+                box-shadow: 5px 7px 15px #cacaca;
+                width: 500px;
+                padding: 2rem;
+                border-radius: 15px;
+                align-self: center;
+                justify-self: center;
+
+                hr{
+                    margin: 1.5rem 0;
+                }
+                .form{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    input{
+                        padding: 1rem;
+                        margin: 1rem 0;
+                        box-shadow: 5px 7px 15px #cacaca;
+                        border-radius: 12px;
+                    }
+                    button{
+                        border-radius: 12px;
+                        padding: 1rem;
+                        background: $color-primary-dark;
+                        box-shadow: 5px 7px 15px #b8b8b8;
+                        color: white;
+                        margin: 0.5rem;
+                        font-weight: 600;
+                        font-size: 20px;
+                        @include smooth();
+                        &:hover{
+                            background: $color-secondary;
+                            color: $color-primary-dark;
+                        }
+                    }
+    
+                }
+
+                .forgotPassword{
+                    margin: 1rem;
+                    a{
+                        font-size: 20px;
+                        color: $color-primary-dark;
+                        padding: 0.5rem 0.7rem;
+                        @include smooth();
+
+                        &:hover{
+                            color: $color-primary-dark;
+                            background: $color-secondary-light;
+                        }
+
+                    }
+                }
+
+                .signUpButton{
+                    display: flex;
+                    flex-direction: column;
+                    button{
+                        display: block;
+                        border-radius: 12px;
+                        padding: 1rem;
+                        background: $color-secondary;
+                        box-shadow: 5px 7px 15px #b8b8b8;
+                        color: $color-primary-dark;
+                        margin: 0.5rem;
+                        font-weight: 600;
+                        font-size: 20px;
+                        @include smooth();
+
+
+                        &:hover{
+                            background: $color-primary-dark;
+                            color: $color-primary-light;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,15 @@
+//TAILWIND IMPORTS
+
+$color-primary-light: #e7f7ff;
+$color-primary: #3BBFFB;
+$color-primary-dark: #0D569E;
+
+$color-secondary-light: #e4fff1;
+$color-secondary: #49e99e;
+$color-secondary-dark: #0f834d;
+
+
+
+@mixin smooth() {
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
