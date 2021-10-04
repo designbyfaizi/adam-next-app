@@ -16,10 +16,9 @@ export default function Home() {
             </Head>
 
             <Layout>
-                <main className="min-h-screen flex flex-col justify-center items-center">
-                  <h1 className="text-purple-700">
-                    ADAM HOME PAGE
-
+                <main className={`${styles.main} flex flex-col justify-center items-center`}>
+                  <h1 className={`${styles.h1}`}>
+                      ADMIN HOME PAGE
                   </h1>
                 </main>
             </Layout>

@@ -3,6 +3,8 @@ import Logo from "../../../public/images/adam.svg";
 import Image from "next/image";
 import { useState } from "react";
 import { Formik } from "formik";
+import router from "next/router";
+import Link from "next/link";
 
 const AdminLogin = () => {
     const [email, setEmail] = useState("");
@@ -12,6 +14,7 @@ const AdminLogin = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        router.push("/admin/users");
     };
 
     return (
@@ -50,13 +53,13 @@ const AdminLogin = () => {
                             <button type="submit">Log In</button>
                         </form>
                         <div className={styles.forgotPassword}>
-                            <a href="/">
-                                Forgot Password?
-                            </a>
+                            <Link href="/">
+                                <a>Forgot Password?</a>
+                            </Link>
                         </div>
                         <hr />
                         <div className={styles.signUpButton}>
-                            <button type="submit">Sign Up</button>
+                            <button>Sign Up</button>
                         </div>
                     </div>
                 </div>
