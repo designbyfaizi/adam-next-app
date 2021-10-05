@@ -7,7 +7,7 @@ const Users = ({ users }) => {
     console.log(users);
 
     const [columns, setColumns] = useState([
-        { title: "Name", field: "name" },
+        { title: "Full Name", field: "cust_fullName" },
         {
             title: "Surname",
             field: "surname",
