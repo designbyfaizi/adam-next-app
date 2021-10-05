@@ -5,16 +5,44 @@ import { useState } from "react";
 import { Formik } from "formik";
 import router from "next/router";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isValid, setIsValid] = useState("none");
+
+    useEffect(() => {
+        if(isValid==="false"){
+            alert("Invalid Credentails");
+        }
+        if(isValid==="true"){
+            router.push("/admin/users");
+        }
+    }, [isValid]);
+
 
     const validateForm = () => {};
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        router.push("/admin/users");
+            if(email != "faizanullah1999@gmail.com" && password != "Test@123"){
+                setTimeout(() => {
+                    setIsValid("false");
+
+                }, 1000)
+            }
+            else if(email === "faizanullah1999@gmail.com" || password === "Test@123"){
+                setTimeout(() => {
+                    setIsValid("true");
+                    
+                }, 1000)
+            }
+            else if(email === "" && password === ""){
+                setIsValid("none");
+            }
+
+        
     };
 
     return (
